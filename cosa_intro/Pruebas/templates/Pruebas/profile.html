@@ -1,0 +1,30 @@
+{% extends 'Pruebas/feed.html' %}
+{% block content %}
+
+<!-- Profile -->
+<div class="profile">
+	<img src="{{ user.profile.image.url }}">
+	<h2>@{{ user.username }}</h2>
+
+
+	
+	
+</div>
+
+<!-- items -->
+<div class="npost">
+	<div>
+		<h5>Numero de Post</h5>
+		<p>{{ user.posts.count }}</p>
+	</div>
+</div>
+
+<div class="sdd">
+	<div>
+		<h5>Post subidos por el usuario:</h5>
+		<p></p>
+	</div>
+</div>
+
+{{ block.super }}
+{% endblock %}
