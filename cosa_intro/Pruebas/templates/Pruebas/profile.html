@@ -1,9 +1,15 @@
 {% extends 'Pruebas/feed.html' %}
 {% block content %}
 
-<!-- Profile -->
+
+{% if user.profile.profile_picture %}
+  		<img src="{{ user.profile.profile_picture.url }}" alt="Perfil de {{ user.username }}">
+	{% else %}
+  		<p>No hay foto de perfil disponible.</p>
+	{% endif %}
+
 <div class="profile">
-	<img src="{{ user.profile.image.url }}">
+	
 	<h2>@{{ user.username }}</h2>
 
 
@@ -11,7 +17,7 @@
 	
 </div>
 
-<!-- items -->
+
 <div class="npost">
 	<div>
 		<h5>Numero de Post</h5>
@@ -25,6 +31,7 @@
 		<p></p>
 	</div>
 </div>
+
 
 {{ block.super }}
 {% endblock %}

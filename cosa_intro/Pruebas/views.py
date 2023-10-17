@@ -4,6 +4,24 @@ from .forms import UserRegisterForm, PostForm
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from .forms import ProfileForm
+
+
+
+def edit_profile(request):
+    profile = request.user.profile
+
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, request.FILES, instance=profile)
+        if form.is_valid():
+            form.save()
+            return redirect('profile')  # Cambia 'profile' por la URL de tu vista de perfil
+    else:
+        form = ProfileForm(instance=profile)
+    
+    return render(request, 'pruebas/edit_profile.html', {'form': form})
+
+
 
 def feed(request):
 	posts = Post.objects.all()
