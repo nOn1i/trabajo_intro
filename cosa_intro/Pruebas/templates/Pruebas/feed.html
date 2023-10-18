@@ -6,12 +6,19 @@
 {% for post in posts %}
 <article>
     <div class="container-article">
-        <img src="{{ post.user.profile.image.url }}" alt="Imagen de perfil">>
+        {% if post.user.profile.profile_picture %}
+            <img src="{{ post.user.profile.profile_picture.url }}" alt="Imagen de perfil">>
+        {% else %}
+            <p>No hay foto de perfil.</p>    
+        {% endif %}    
         <div>
             <h2 class="username"><a href="{% url 'profile' post.user.username %}">@{{ post.user.username }}</a></h2>
             <i class="clock"></i>
             <time data-time="#">{{ post.timestamp|naturaltime }}</time>
             <div class="post">{{ post.content }}</div>
+            {% if post.image %}
+                <img src="{{ post.image.url }}" alt="Imagen del post">
+            {% endif %}
         </div>
     </div>
 </article>

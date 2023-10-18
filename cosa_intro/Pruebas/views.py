@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from .forms import ProfileForm
-
+from .models import Profile
 
 
 def edit_profile(request):
@@ -15,7 +15,7 @@ def edit_profile(request):
         form = ProfileForm(request.POST, request.FILES, instance=profile)
         if form.is_valid():
             form.save()
-            return redirect('profile')  # Cambia 'profile' por la URL de tu vista de perfil
+            return redirect('profile')  
     else:
         form = ProfileForm(instance=profile)
     
@@ -33,8 +33,9 @@ def register(request):
 	if request.method == 'POST':
 		form = UserRegisterForm(request.POST)
 		if form.is_valid():
-			form.save()
+			user = form.save()
 			username = form.cleaned_data['username']
+			Profile.objects.create(user=user)
 			messages.success(request, f'Usuario {username} creado')
 			return redirect('feed')
 	else:
@@ -47,7 +48,7 @@ def register(request):
 def post(request):
 	current_user = get_object_or_404(User, pk=request.user.pk)
 	if request.method == 'POST':
-		form = PostForm(request.POST)
+		form = PostForm(request.POST, request.FILES)
 		if form.is_valid():
 			post = form.save(commit=False)
 			post.user = current_user

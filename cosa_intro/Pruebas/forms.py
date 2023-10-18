@@ -16,10 +16,12 @@ class UserRegisterForm(UserCreationForm):
 
 class PostForm(forms.ModelForm):
 	content = forms.CharField(label='', widget=forms.Textarea(attrs={'rows':2, 'placeholder': 'Publica aqui!'}), required=True)
+	image = forms.ImageField(label='', required=False)
+
 
 	class Meta:
 		model = Post
-		fields = ['content']
+		fields = ['content', "image"]
 
 class ProfileForm(forms.ModelForm):
     class Meta:
