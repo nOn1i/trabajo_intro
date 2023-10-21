@@ -9,7 +9,7 @@
         {% if post.user.profile.profile_picture %}
             <img src="{{ post.user.profile.profile_picture.url }}" alt="Imagen de perfil">>
         {% else %}
-            <p>No hay foto de perfil.</p>    
+            <img src="{{ MEDIA_URL }}media/descarga.png" alt="sin Imagen de perfil">   
         {% endif %}    
         <div>
             <h2 class="username"><a href="{% url 'profile' post.user.username %}">@{{ post.user.username }}</a></h2>

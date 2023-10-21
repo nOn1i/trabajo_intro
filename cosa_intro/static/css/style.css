@@ -3,7 +3,7 @@ body{
 	font-size: 62.5%;
 	font-family: 'Varela Round', Helvetica, Arial, serif;
 }
-/* Global Styles*/
+
 h1{
 
 }
@@ -36,7 +36,7 @@ img{
 	object-fit: cover;
 }
 
-/* Nav bar */
+
 .main-head{
 	background: rgb(105, 112, 105);
 	color: black;
@@ -63,7 +63,7 @@ nav.main ul{
 	flex: 2 1 40rem;
 }
 
-/* -----*/
+
 
 a{
 	font-size: .93rem;
@@ -80,7 +80,7 @@ a{
 	padding-bottom: 20px;
 }
 
-/* NAVIGATION BAR */
+
 .second-nav{
 	display: flex;
 	padding: 15px 30px;
@@ -115,7 +115,7 @@ a{
 	color: grey;
 }
 
-/* Article */
+
 
 article{
   color: rgb(0, 0, 0);
@@ -157,7 +157,7 @@ time {
 	font-size: .94rem;
 }
 
-/* PROFILE */
+
 .profile{
 	display: flex;
 	align-items: center;
@@ -178,7 +178,7 @@ time {
 
 
 
-/*Form Elements*/
+
 form {
     margin: 0;
     padding: 40px;
@@ -228,7 +228,7 @@ button#submit:hover {
   opacity: 1;
 }
 
-/*Notifications*/
+
 .notification {
   text-align: center;
   padding: 10px 20px;
@@ -247,7 +247,6 @@ button#submit:hover {
 }
 
 
-/*Footer*/
 footer{
   color: white;
   text-align: center;
@@ -271,10 +270,12 @@ img.profile{
   border-radius: 50%;
 }
 
+.editarperf {
+  text-align: center;
+}
 
 
 
-/*Media Queries*/
 @media (max-width: 786px) {
   .main {
     width: 95%;

@@ -10,6 +10,7 @@ from django.contrib.auth.models import AbstractUser
 class Profile(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
 	profile_picture = models.ImageField(upload_to='profile_pictures/', null=True, blank=True)	
+	biography = models.TextField(blank=True)
 
 	def __str__(self):
 		return f'Perfil de {self.user.username}'
