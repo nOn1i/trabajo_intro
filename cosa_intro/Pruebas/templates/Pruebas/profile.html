@@ -3,7 +3,9 @@
 
 
 {% if user.profile.profile_picture %}
-  		<img src="{{ user.profile.profile_picture.url }}" alt="Perfil de {{ user.username }}">
+		<div class="fotoperfilperfil">
+  			<img src="{{ user.profile.profile_picture.url }}" alt="Perfil de {{ user.username }}">
+		</div>
 	{% else %}
   		<p>No hay foto de perfil disponible.</p>
 	{% endif %}

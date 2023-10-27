@@ -22,6 +22,7 @@ class Post(models.Model):
 	timestamp = models.DateTimeField(default=timezone.now)
 	content = models.TextField()
 	image = models.ImageField(null=True)
+	location = models.CharField(max_length=255, blank=True, null=True)
 
 
 	class Meta:

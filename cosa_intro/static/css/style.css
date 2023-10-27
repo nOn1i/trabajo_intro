@@ -11,6 +11,7 @@ h1{
 h2{
 }
 
+
 h5{
 	font-size: 1rem;
 	margin-bottom: 0;
@@ -137,11 +138,40 @@ article{
   display: flex;
 }
 
-.container-article img{
+.profile-picture {
   height: 68px;
   width: 68px;
   margin-right: 10px;
   border-radius: 50%;
+}
+
+.post-image {
+  max-width: 100%;
+  max-height: 300px;
+  margin-top: 10px;
+}
+
+.post-image {
+  height: 300px;
+  width: 300px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+ 
+}
+
+.fotoperfilperfil{
+  display: flex;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-left: 310px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+.fotoperfilperfil img {
+  width: 100%; /* Esto asegura que la imagen cubra completamente el contenedor */
+  height: auto; /* Esto mantiene la proporción de la imagen */
 }
 
 article:last-child {

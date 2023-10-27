@@ -7,9 +7,9 @@
 <article>
     <div class="container-article">
         {% if post.user.profile.profile_picture %}
-            <img src="{{ post.user.profile.profile_picture.url }}" alt="Imagen de perfil">>
+            <img src="{{ post.user.profile.profile_picture.url }}" alt="Imagen de perfil" class="profile-picture">>>
         {% else %}
-            <img src="{{ MEDIA_URL }}media/descarga.png" alt="sin Imagen de perfil">   
+            <img src="{{ MEDIA_URL }}media/descarga.png" alt="sin Imagen de perfil" class="profile-picture">   
         {% endif %}    
         <div>
             <h2 class="username"><a href="{% url 'profile' post.user.username %}">@{{ post.user.username }}</a></h2>
@@ -17,8 +17,22 @@
             <time data-time="#">{{ post.timestamp|naturaltime }}</time>
             <div class="post">{{ post.content }}</div>
             {% if post.image %}
-                <img src="{{ post.image.url }}" alt="Imagen del post">
+                <div class="post-image">
+                    <img src="{{ post.image.url }}" alt="Imagen del post" class="post-image">>
+                </div>
+                    
             {% endif %}
+            {% if post.location %}
+                <iframe
+                    width="500"
+                    height="300"
+                    style="border:0"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBfCedf-vqBmj1lAbKalJiVS1NPEa_pVcQ&q={{ post.location }}">
+            </iframe>
+             {% endif %}
         </div>
     </div>
 </article>
