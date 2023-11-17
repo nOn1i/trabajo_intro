@@ -1,0 +1,333 @@
+body{
+	background: #222525;
+  background-image: url("/static/images/background.jpg");
+	font-size: 62.5%;
+	font-family: 'Varela Round', Helvetica, Arial, serif;
+}
+
+h1{
+
+}
+
+h2{
+}
+
+
+h5{
+	font-size: 1rem;
+	margin-bottom: 0;
+
+}
+
+p{
+	font-size: 1rem;
+}
+article{
+  background-color: white;
+  border-color: #d3d3d3;
+}
+nav{
+  background-color:   #d3d3d3 ;
+}
+
+div{
+  background-color: white;
+}
+
+div.container-article{
+  
+  background-color: white
+  
+  ;
+}
+
+button{
+	font-size: 1rem;
+	color: white;
+	padding: 0.4rem 1.4rem;
+	border: none;
+	background: #3b413f;
+	 border-radius: 4px;
+	cursor: pointer;
+
+}
+
+img{
+	object-fit: cover;
+}
+
+
+.main-head{
+	background: rgb(181, 181, 181);
+	color: black;
+}
+
+nav.main{
+	min-height: 7vh;
+	display: flex;
+	width: 65%;
+	margin: auto; 
+	align-items: center;
+	padding: 0.5rem;
+}
+
+nav.main ul{
+	display: flex;
+	flex: 1 1 40rem;
+	justify-content: space-around;
+	align-items: center;
+	list-style: none;
+}
+
+#logo{
+	flex: 2 1 40rem;
+}
+
+
+
+a{
+	font-size: .93rem;
+	text-decoration: none;
+	color: black;
+}
+
+
+.main{
+	background: white;
+	width: 60%;
+	margin: 5% auto;
+	border-radius: 4px;
+	padding-bottom: 20px;
+}
+
+
+.second-nav{
+	display: flex;
+	padding: 15px 30px;
+}
+
+.second-nav .feed{
+	flex: 1 1 30px;
+}
+
+.second-nav .feed:hover{
+	flex: 1 1 30px;
+	color: rgb(160, 121, 121);
+}
+
+.second-nav .profile{
+	flex: 1 1 30px;
+}
+
+.second-nav .profile:hover{
+	flex: 1 1 30px;
+	color: grey;
+}
+
+.second-nav .new{
+	flex: 6 1 5rem;
+	text-align: right;
+	text-transform: uppercase;
+  	color: #7A9D96;
+}
+
+.second-nav .new:hover{
+	color: grey;
+}
+
+
+
+article{
+  color: rgb(0, 0, 0);
+	width: 93%;
+	margin: auto;
+	padding: 40px 0;
+	border-bottom: 2px solid #d3d3d3;
+}
+
+.username{
+	margin-bottom: .2rem;
+}
+
+.username a{
+	font-size: 1.1rem;
+}
+
+.container-article{
+  display: flex;
+}
+
+.profile-picture {
+  height: 68px;
+  width: 68px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.post-image {
+  max-width: 100%;
+  max-height: 300px;
+  margin-top: 10px;
+}
+
+.post-image {
+  height: 300px;
+  width: 300px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+ 
+}
+
+.fotoperfilperfil{
+  display: flex;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-left: 310px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+.fotoperfilperfil img {
+  width: 100%; /* Esto asegura que la imagen cubra completamente el contenedor */
+  height: auto; /* Esto mantiene la proporción de la imagen */
+}
+
+article:last-child {
+  border-bottom: 0;
+}
+
+time {
+  font-size: .8rem;
+  opacity: .7;
+}
+
+.post{
+	font-size: .94rem;
+}
+
+
+.profile{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.profile img{
+  height: 100px;
+  width: 100px;
+  margin-right: 10px;
+  border-radius: 50%;
+  margin: 20px;
+}
+.profile h2{
+	margin-top: -10px;
+	font-size: 1.3rem;
+}
+
+
+
+
+form {
+    margin: 0;
+    padding: 40px;
+    font-size: 1rem;
+}
+input {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #D3D8DC;
+  outline: 0;
+  background: #fff;
+  padding: 20px 0 4px;
+  margin: 0 0 20px;
+  color: #777B7E;
+}
+input:focus {
+  border-color: #7A9D96;
+  color: #2C3238;
+}
+textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #D3D8DC;
+  outline: 0;
+  background: #fff;
+  padding: 20px 0 4px;
+  margin: 0 0 20px;
+  color: #777B7E;
+}
+textarea:focus {
+  border-color: #7A9D96;
+  color: #2C3238;
+}
+button#submit {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  background: #7A9D96;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  opacity: .8;
+  transition: .35s linear;
+}
+
+button#submit:hover {
+  opacity: 1;
+}
+
+
+.notification {
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+.success {
+  background: #43DC7E;
+  color: white;
+}
+.error {
+  background: #AB3444;
+  color: white;
+  margin-bottom: 20px;
+}
+
+
+footer{
+  color: #333333;
+  text-align: center;
+  font-size: .875em;
+  margin: 40px 0;
+}
+
+footer p {
+  opacity: .8;
+}
+
+footer p a {
+  color: white;
+}
+
+img.profile{
+  height: 80px;
+  width: 80px;
+  margin-right: 10px;
+  margin-left: 30px;
+  border-radius: 50%;
+}
+
+.editarperf {
+  text-align: center;
+}
+
+
+
+@media (max-width: 786px) {
+  .main {
+    width: 95%;
+  }
+
+}

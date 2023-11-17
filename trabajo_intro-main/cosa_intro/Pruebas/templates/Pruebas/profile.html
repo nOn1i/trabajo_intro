@@ -1,0 +1,50 @@
+{% extends 'Pruebas/feed.html' %}
+{% block content %}
+
+
+{% if user.profile.profile_picture %}
+		<div class="fotoperfilperfil">
+  			<img src="{{ user.profile.profile_picture.url }}" alt="Perfil de {{ user.username }}">
+		</div>
+	{% else %}
+  		<p>No hay foto de perfil disponible.</p>
+	{% endif %}
+
+
+<div class="profile">
+
+	<h2>@{{ user.username }}</h2>
+
+	{% if user.profile.biography %}
+
+		<p>{{ user.profile.biography }}</p>
+
+	{% else %}
+
+		<p>No hay biografía disponible.</p>
+
+	{% endif %}
+
+	
+</div>
+
+
+
+
+<div class="npost">
+	<div>
+		<h5>Numero de Post</h5>
+		<p>{{ user.posts.count }}</p>
+	</div>
+</div>
+
+<div class="sdd">
+	<div>
+		<h5>Post subidos por el usuario:</h5>
+		<p></p>
+	</div>
+</div>
+
+
+{{ block.super }}
+{% endblock %}
